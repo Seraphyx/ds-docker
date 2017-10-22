@@ -1,4 +1,4 @@
-nupmy
+numpy
 scipy 
 pandas 
 scikit-learn 
