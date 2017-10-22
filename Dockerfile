@@ -34,3 +34,6 @@ CMD ["python", "app.py"]
 #
 # Enter the running docker container
 # docker exec -it [container-id] bash
+#
+# In order to leave the running container press 'Ctrl + p' and 'Ctrl + q'
+#
