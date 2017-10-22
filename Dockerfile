@@ -17,7 +17,8 @@ EXPOSE 80
 ENV NAME World
 
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+# CMD ["python", "app.py"]
+CMD ["jupyter", "notebook"]
 
 # Build with name
 # docker build -t datascience .
@@ -26,7 +27,7 @@ CMD ["python", "app.py"]
 # docker images
 #
 # Run the image in detach mode
-# docker run -t -d -p 4000:80 datascience
+# docker run -t -d -p 8888:80 datascience
 #
 # View Image ID
 # docker ps -a
