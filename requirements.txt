@@ -1,1 +1,7 @@
-nupmy scipy pandas scikit-learn python3-pip python3-dev tensorflow
+python3-pip 
+python3-dev 
+nupmy
+scipy 
+pandas 
+scikit-learn 
+tensorflow
