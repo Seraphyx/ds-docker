@@ -26,10 +26,10 @@ CMD ["python", "app.py"]
 # docker images
 #
 # Run the image in detach mode
-# docker run -d -p 4000:80 datascience
+# docker run -t -d -p 4000:80 datascience
 #
 # View Image ID
-# docker ps
+# docker ps -a
 # docker container ls
 #
 # Enter the running docker container
