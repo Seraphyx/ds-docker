@@ -1,0 +1,1 @@
+npmy scipy pandas scikit-learn python3-pip python3-dev tensorflow

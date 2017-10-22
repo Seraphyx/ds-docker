@@ -18,3 +18,19 @@ ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
+
+# Build with name
+# docker build -t datascience .
+#
+# View images
+# docker images
+#
+# Run the image in detach mode
+# docker run -d -p 4000:80 datascience
+#
+# View Image ID
+# docker ps
+# docker container ls
+#
+# Enter the running docker container
+# docker exec -it [container-id] bash
