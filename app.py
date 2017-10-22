@@ -4,6 +4,7 @@ import os
 import socket
 
 
+print("Running app.py")
 
 '''
 # Connect to Redis
