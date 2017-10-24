@@ -4,7 +4,7 @@ FROM jupyter/scipy-notebook
 
 MAINTAINER Jupyter Project <jupyter@googlegroups.com>
 
-USER root
+#USER root
 
 
 # Set the working directory to /app
