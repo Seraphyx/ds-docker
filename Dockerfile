@@ -1,5 +1,11 @@
 # Use an official Python runtime as a parent image
-FROM python:3.6-slim
+# FROM python:3.6-slim
+FROM jupyter/scipy-notebook
+
+MAINTAINER Jupyter Project <jupyter@googlegroups.com>
+
+USER root
+
 
 # Set the working directory to /app
 WORKDIR /app
@@ -8,17 +14,34 @@ WORKDIR /app
 ADD . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip3 install -r requirements.txt
+# RUN pip3 install -r requirements.txt
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
 
 # Define environment variable
-ENV NAME World
+ENV NAME World \
+	NOTEBOOK_ENV=PROD
+
+# Install Tensorflow
+RUN conda install --quiet --yes \
+	--file requirements-conda.txt && \
+    # 'tensorflow=1.3*' \
+    # 'keras=2.0*' && \
+    conda clean -tipsy && \
+    fix-permissions $CONDA_DIR
+
+ENV XDG_CACHE_HOME /home/$NB_USER/.cache/
+
+RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
+    fix-permissions /home/$NB_USER
+
+USER $NB_USER
+
 
 # Run app.py when the container launches
 # CMD ["python", "app.py"]
-CMD ["jupyter", "notebook"]
+# CMD ["jupyter", "notebook"]
 
 # Build with name
 # docker build -t datascience .
