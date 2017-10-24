@@ -12,7 +12,7 @@ WORKDIR /app
 ADD . /app
 
 
-RUN chmod 777 .
+RUN chmod 777 /app
 
 # Install any needed packages specified in requirements.txt
 # RUN pip3 install -r requirements.txt
