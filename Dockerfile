@@ -1,10 +1,8 @@
 # Use an official Python runtime as a parent image
 # FROM python:3.6-slim
-FROM jupyter/scipy-notebook
+FROM jupyter/tensorflow-notebook
 
 MAINTAINER Jupyter Project <jupyter@googlegroups.com>
-
-#USER root
 
 
 # Set the working directory to /app
