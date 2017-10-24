@@ -8,6 +8,7 @@
 # Afterwards run this fule
 # ./setup.sh
 
+sudo yum install -y git
 sudo yum update -y
 sudo yum install -y docker
 sudo service docker start

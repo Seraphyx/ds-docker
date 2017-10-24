@@ -36,6 +36,8 @@ ENV XDG_CACHE_HOME /home/$NB_USER/.cache/
 RUN MPLBACKEND=Agg python -c "import matplotlib.pyplot" && \
     fix-permissions /home/$NB_USER
 
+
+
 USER $NB_USER
 
 
@@ -50,7 +52,7 @@ USER $NB_USER
 # docker images
 #
 # Run the image in detach mode
-# docker run -t -d -p 8888:80 datascience
+# docker run -it --rm -p 8888:8888 datascience
 #
 # View Image ID
 # docker ps -a
